@@ -25,6 +25,8 @@ pub enum Error {
     Borrow(#[from] std::cell::BorrowError),
     #[error(transparent)]
     IO(#[from] std::io::Error),
+    #[error(transparent)]
+    DecodeHexError(#[from] crate::util::DecodeHexError),
     #[error("Unable to generate DID")]
     UnableToGenerateDID,
     #[error("Unknown DID method")]
