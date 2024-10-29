@@ -1,6 +1,5 @@
 {
   "name": "didkit-wasm",
-  "type": "module",
   "collaborators": [
     "Spruce Systems, Inc."
   ],
@@ -11,7 +10,7 @@
     "didkit_wasm_bg.js",
     "didkit_wasm.d.ts"
   ],
-  "main": "didkit_wasm.js",
+  "module": "didkit_wasm.js",
   "types": "didkit_wasm.d.ts",
   "sideEffects": [
     "./didkit_wasm.js",
