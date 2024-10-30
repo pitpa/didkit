@@ -1,16 +1,16 @@
 /* tslint:disable */
 /* eslint-disable */
 export const memory: WebAssembly.Memory;
-export function getVersion(): Array;
+export function getVersion(a: number): void;
 export function resolveDID(a: number, b: number, c: number, d: number): number;
-export function generateEd25519Key(): Array;
-export function keyToDID(a: number, b: number, c: number, d: number): Array;
-export function pubkeyToDID(a: number, b: number, c: number, d: number): Array;
+export function generateEd25519Key(a: number): void;
+export function keyToDID(a: number, b: number, c: number, d: number, e: number): void;
+export function pubkeyToDID(a: number, b: number, c: number, d: number, e: number): void;
 export function didToVerificationMethod(a: number, b: number): number;
 export function keyToVerificationMethod(a: number, b: number, c: number, d: number): number;
-export function getKeyId(a: number, b: number, c: number, d: number): Array;
-export function generateCredentialDataToSign(a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number): Array;
-export function finalizeCredential(a: number, b: number, c: number, d: number): Array;
+export function getKeyId(a: number, b: number, c: number, d: number, e: number): void;
+export function generateCredentialDataToSign(a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number): void;
+export function finalizeCredential(a: number, b: number, c: number, d: number, e: number): void;
 export function issueCredential(a: number, b: number, c: number, d: number, e: number, f: number): number;
 export function prepareIssueCredential(a: number, b: number, c: number, d: number, e: number, f: number): number;
 export function completeIssueCredential(a: number, b: number, c: number, d: number, e: number, f: number): number;
@@ -35,11 +35,8 @@ export function didkit_error_code(): number;
 export function __wbindgen_malloc(a: number, b: number): number;
 export function __wbindgen_realloc(a: number, b: number, c: number, d: number): number;
 export const __wbindgen_export_2: WebAssembly.Table;
-export const __wbindgen_export_3: WebAssembly.Table;
-export function closure2982_externref_shim(a: number, b: number, c: number): void;
+export function wasm_bindgen__convert__closures__invoke1_mut__h1078bbe7410d228a(a: number, b: number, c: number): void;
+export function __wbindgen_add_to_stack_pointer(a: number): number;
 export function __wbindgen_free(a: number, b: number, c: number): void;
-export function __externref_table_dealloc(a: number): void;
 export function __wbindgen_exn_store(a: number): void;
-export function __externref_table_alloc(): number;
-export function closure3350_externref_shim(a: number, b: number, c: number, d: number): void;
-export function __wbindgen_start(): void;
+export function wasm_bindgen__convert__closures__invoke2_mut__h455f85fe3fdfd9f2(a: number, b: number, c: number, d: number): void;
