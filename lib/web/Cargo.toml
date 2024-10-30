@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Spruce Systems, Inc."]
 edition = "2018"
 
+[build-dependencies]
+wasm-bindgen-cli = "=0.2.92"
+
 [dependencies]
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4"

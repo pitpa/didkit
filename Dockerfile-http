@@ -1,4 +1,4 @@
-FROM rust:1.67.0 as builder
+FROM clux/muslrust as builder
 
 ADD . /didkit
 ADD ./ssi /ssi
