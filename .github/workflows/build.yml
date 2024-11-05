@@ -12,6 +12,7 @@ on:
 env:
   CARGO_TERM_COLOR: always
   SSI_REF: main
+  RUSTFLAGS: "-Dwarnings"
 
 defaults:
   run:
@@ -22,41 +23,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout DIDKit repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: didkit
+        submodules: true
 
     - name: Checkout SSI library
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: spruceid/ssi
         path: ssi
         ref: ${{env.SSI_REF}}
         submodules: true
 
-    - name: Cache Cargo registry and build artifacts
-      uses: actions/cache@v3.0.11
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
       with:
-        path: |
-          ~/.cargo/registry
-          ~/.cargo/git
-          target
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml', 'lib/Makefile', '**.rs') }}
-        restore-keys: |
-          ${{ runner.os }}-cargo-
+        workspaces: |
+          didkit
 
     - name: Install Rust old stable with incremental compilation
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: 1.66.0
+        toolchain: 1.70.0
         profile: minimal
         default: true
 
     - name: Build
-      run: cargo build --verbose
+      run: cargo build
 
     - name: Test
-      run: cargo test --verbose
+      run: cargo test
 
     - name: Test CLI
       run: cli/tests/example.sh
@@ -64,18 +61,10 @@ jobs:
     - name: Test CLI with ssh-agent
       run: cli/tests/ssh-agent.sh
 
-    - name: Test HTTP server
-      run: http/tests/example.sh
-
     - name: Test CLI (did:tz)
       env:
         DID_METHOD: tz
       run: cli/tests/example.sh
-
-    - name: Test HTTP server (did:tz)
-      env:
-        DID_METHOD: tz
-      run: http/tests/example.sh
 
     - name: Test CLI (JWT)
       env:
@@ -92,36 +81,8 @@ jobs:
         VP_PROOF_FORMAT: jwt
       run: cli/tests/example.sh
 
-    - name: Test HTTP server (JWT)
-      env:
-        PROOF_FORMAT: jwt
-      run: http/tests/example.sh
-
-    - name: Test HTTP server (JWT VC in LDP VP)
-      env:
-        VC_PROOF_FORMAT: jwt
-      run: cli/tests/example.sh
-
-    - name: Test HTTP server (LDP VC in JWT VP)
-      env:
-        VP_PROOF_FORMAT: jwt
-      run: cli/tests/example.sh
-
     - name: Test binary-signing verify example
       run: examples/binary-signing/index.sh verify examples/binary-signing/hello.txt examples/binary-signing/hello-vc.jsonld
-
-    - name: Checkout VC API Test Suite
-      uses: actions/checkout@v3
-      with:
-        repository: w3c-ccg/vc-api-test-suite
-        path: didkit/http/tests/vc-api/vc-api-test-suite
-        ref: 4923f0d627a223cd20a4ceb112336477ded445ca
-
-    - name: Run VC API Test Suite
-      working-directory: didkit/http/tests/vc-api
-      run: |
-        npm install
-        npm test
 
     - name: Install wasm-pack
       run: make -C lib install-wasm-pack
@@ -156,40 +117,35 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
     - name: Install NDK
-      run: sdkmanager --install "build-tools;29.0.3" "ndk;22.0.7026061" "cmdline-tools;latest"
+      run: sdkmanager --install "build-tools;33.0.2" "ndk;25.2.9519653" "cmdline-tools;latest"
     - name: Install gcc-multilib
       run: |
         sudo apt update
         sudo apt install gcc-multilib -y
     - name: Build Android Archive
-      run: AR_i686_linux_android=$ANDROID_SDK_ROOT/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/i686-linux-android/bin/ar PATH=$ANDROID_SDK_ROOT/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH TARGET_CC=$(which clang) cargo build --lib --target i686-linux-android
+      run: AR=$ANDROID_SDK_ROOT/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar RANLIB=$ANDROID_SDK_ROOT/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib TARGET_CC=$ANDROID_SDK_ROOT/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android19-clang PATH=$ANDROID_SDK_ROOT/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH cargo build --lib --target i686-linux-android
 
   build_ios:
     runs-on: macos-latest
     steps:
     - name: Checkout DIDKit repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: didkit
 
     - name: Checkout SSI library
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: spruceid/ssi
         path: ssi
         ref: ${{env.SSI_REF}}
         submodules: true
 
-    - name: Cache Cargo registry and build artifacts
-      uses: actions/cache@v3.0.11
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
       with:
-        path: |
-          ~/.cargo/registry
-          ~/.cargo/git
-          target
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml', 'lib/Makefile', '**.rs') }}
-        restore-keys: |
-          ${{ runner.os }}-cargo-
+        workspaces: |
+          didkit
 
     - name: Install Rust iOS targets
       run: make -C lib install-rustup-ios
@@ -201,28 +157,23 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout DIDKit repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: didkit
 
     - name: Checkout SSI library
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: spruceid/ssi
         path: ssi
         ref: ${{env.SSI_REF}}
         submodules: true
 
-    - name: Cache Cargo registry and build artifacts
-      uses: actions/cache@v3.0.11
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
       with:
-        path: |
-          ~/.cargo/registry
-          ~/.cargo/git
-          target
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml', 'lib/Makefile', '**.rs') }}
-        restore-keys: |
-          ${{ runner.os }}-cargo-
+        workspaces: |
+          didkit
 
     - name: Build
-      run: cargo build --verbose
+      run: cargo build

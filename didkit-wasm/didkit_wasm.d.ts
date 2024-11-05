@@ -44,14 +44,6 @@ export function keyToVerificationMethod(method_pattern: string, jwk: string): Pr
  */
 export function getKeyId(jwk: string, verification_method?: string): string;
 /**
- * @param {string} credential
- * @param {string} proof_options
- * @param {string} algorithm
- * @param {string} key_id
- * @returns {string}
- */
-export function generateCredentialDataToSign(credential: string, proof_options: string, algorithm: string, key_id: string): string;
-/**
  * @param {string} signing_input
  * @param {string} signature
  * @returns {string}
