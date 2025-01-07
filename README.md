@@ -15,7 +15,7 @@ sh build.sh
 ## 使用例
 ```json
 "dependencies": {
-  "@pitpa/didkit": "https://github.com/pitpa/didkit.git"
+  "@pitpa/didkit": "https://github.com/dou-idd/didkit.git"
 }
 ```
 
