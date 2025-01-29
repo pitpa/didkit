@@ -215,7 +215,7 @@ function makeMutClosure(arg0, arg1, dtor, f) {
     return real;
 }
 function __wbg_adapter_26(arg0, arg1, arg2) {
-    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hf36ec772805ea68e(arg0, arg1, addHeapObject(arg2));
+    wasm.__wbindgen_export_3(arg0, arg1, addHeapObject(arg2));
 }
 
 /**
@@ -234,7 +234,7 @@ module.exports.getVersion = function() {
         return getStringFromWasm0(r0, r1);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred1_0, deferred1_1, 1);
+        wasm.__wbindgen_export_4(deferred1_0, deferred1_1, 1);
     }
 };
 
@@ -244,9 +244,9 @@ module.exports.getVersion = function() {
 * @returns {Promise<any>}
 */
 module.exports.resolveDID = function(did, input_metadata) {
-    const ptr0 = passStringToWasm0(did, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(did, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(input_metadata, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(input_metadata, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     const ret = wasm.resolveDID(ptr0, len0, ptr1, len1);
     return takeObject(ret);
@@ -276,7 +276,7 @@ module.exports.generateEd25519Key = function() {
         return getStringFromWasm0(ptr1, len1);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred2_0, deferred2_1, 1);
+        wasm.__wbindgen_export_4(deferred2_0, deferred2_1, 1);
     }
 };
 
@@ -290,9 +290,9 @@ module.exports.keyToDID = function(method_pattern, jwk) {
     let deferred4_1;
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        const ptr1 = passStringToWasm0(jwk, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr1 = passStringToWasm0(jwk, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len1 = WASM_VECTOR_LEN;
         wasm.keyToDID(retptr, ptr0, len0, ptr1, len1);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
@@ -310,7 +310,7 @@ module.exports.keyToDID = function(method_pattern, jwk) {
         return getStringFromWasm0(ptr3, len3);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred4_0, deferred4_1, 1);
+        wasm.__wbindgen_export_4(deferred4_0, deferred4_1, 1);
     }
 };
 
@@ -324,9 +324,9 @@ module.exports.pubkeyToDID = function(method_pattern, pubkey_hex) {
     let deferred4_1;
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        const ptr1 = passStringToWasm0(pubkey_hex, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr1 = passStringToWasm0(pubkey_hex, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len1 = WASM_VECTOR_LEN;
         wasm.pubkeyToDID(retptr, ptr0, len0, ptr1, len1);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
@@ -344,7 +344,7 @@ module.exports.pubkeyToDID = function(method_pattern, pubkey_hex) {
         return getStringFromWasm0(ptr3, len3);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred4_0, deferred4_1, 1);
+        wasm.__wbindgen_export_4(deferred4_0, deferred4_1, 1);
     }
 };
 
@@ -353,7 +353,7 @@ module.exports.pubkeyToDID = function(method_pattern, pubkey_hex) {
 * @returns {Promise<any>}
 */
 module.exports.didToVerificationMethod = function(did) {
-    const ptr0 = passStringToWasm0(did, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(did, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
     const ret = wasm.didToVerificationMethod(ptr0, len0);
     return takeObject(ret);
@@ -365,9 +365,9 @@ module.exports.didToVerificationMethod = function(did) {
 * @returns {Promise<any>}
 */
 module.exports.keyToVerificationMethod = function(method_pattern, jwk) {
-    const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(method_pattern, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(jwk, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(jwk, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     const ret = wasm.keyToVerificationMethod(ptr0, len0, ptr1, len1);
     return takeObject(ret);
@@ -383,9 +383,9 @@ module.exports.getKeyId = function(jwk, verification_method) {
     let deferred4_1;
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        const ptr0 = passStringToWasm0(jwk, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(jwk, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        var ptr1 = isLikeNone(verification_method) ? 0 : passStringToWasm0(verification_method, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        var ptr1 = isLikeNone(verification_method) ? 0 : passStringToWasm0(verification_method, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         var len1 = WASM_VECTOR_LEN;
         wasm.getKeyId(retptr, ptr0, len0, ptr1, len1);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
@@ -403,7 +403,7 @@ module.exports.getKeyId = function(jwk, verification_method) {
         return getStringFromWasm0(ptr3, len3);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred4_0, deferred4_1, 1);
+        wasm.__wbindgen_export_4(deferred4_0, deferred4_1, 1);
     }
 };
 
@@ -419,13 +419,13 @@ module.exports.generateCredentialDataToSign = function(credential, proof_options
     let deferred6_1;
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len1 = WASM_VECTOR_LEN;
-        const ptr2 = passStringToWasm0(algorithm, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr2 = passStringToWasm0(algorithm, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len2 = WASM_VECTOR_LEN;
-        const ptr3 = passStringToWasm0(key_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr3 = passStringToWasm0(key_id, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len3 = WASM_VECTOR_LEN;
         wasm.generateCredentialDataToSign(retptr, ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
@@ -443,7 +443,7 @@ module.exports.generateCredentialDataToSign = function(credential, proof_options
         return getStringFromWasm0(ptr5, len5);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred6_0, deferred6_1, 1);
+        wasm.__wbindgen_export_4(deferred6_0, deferred6_1, 1);
     }
 };
 
@@ -457,9 +457,9 @@ module.exports.finalizeCredential = function(signing_input, signature) {
     let deferred4_1;
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        const ptr0 = passStringToWasm0(signing_input, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(signing_input, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        const ptr1 = passStringToWasm0(signature, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr1 = passStringToWasm0(signature, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len1 = WASM_VECTOR_LEN;
         wasm.finalizeCredential(retptr, ptr0, len0, ptr1, len1);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
@@ -477,7 +477,7 @@ module.exports.finalizeCredential = function(signing_input, signature) {
         return getStringFromWasm0(ptr3, len3);
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
-        wasm.__wbindgen_free(deferred4_0, deferred4_1, 1);
+        wasm.__wbindgen_export_4(deferred4_0, deferred4_1, 1);
     }
 };
 
@@ -488,11 +488,11 @@ module.exports.finalizeCredential = function(signing_input, signature) {
 * @returns {Promise<any>}
 */
 module.exports.issueCredential = function(credential, proof_options, key) {
-    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.issueCredential(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -505,11 +505,11 @@ module.exports.issueCredential = function(credential, proof_options, key) {
 * @returns {Promise<any>}
 */
 module.exports.prepareIssueCredential = function(credential, linked_data_proof_options, public_key) {
-    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(public_key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(public_key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.prepareIssueCredential(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -522,11 +522,11 @@ module.exports.prepareIssueCredential = function(credential, linked_data_proof_o
 * @returns {Promise<any>}
 */
 module.exports.completeIssueCredential = function(credential, preparation, signature) {
-    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(credential, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.completeIssueCredential(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -538,9 +538,9 @@ module.exports.completeIssueCredential = function(credential, preparation, signa
 * @returns {Promise<any>}
 */
 module.exports.verifyCredential = function(vc, proof_options) {
-    const ptr0 = passStringToWasm0(vc, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(vc, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     const ret = wasm.verifyCredential(ptr0, len0, ptr1, len1);
     return takeObject(ret);
@@ -553,11 +553,11 @@ module.exports.verifyCredential = function(vc, proof_options) {
 * @returns {Promise<any>}
 */
 module.exports.issuePresentation = function(presentation, proof_options, key) {
-    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.issuePresentation(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -570,11 +570,11 @@ module.exports.issuePresentation = function(presentation, proof_options, key) {
 * @returns {Promise<any>}
 */
 module.exports.prepareIssuePresentation = function(presentation, linked_data_proof_options, public_key) {
-    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(public_key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(public_key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.prepareIssuePresentation(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -587,11 +587,11 @@ module.exports.prepareIssuePresentation = function(presentation, linked_data_pro
 * @returns {Promise<any>}
 */
 module.exports.completeIssuePresentation = function(presentation, preparation, signature) {
-    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(presentation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.completeIssuePresentation(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -603,9 +603,9 @@ module.exports.completeIssuePresentation = function(presentation, preparation, s
 * @returns {Promise<any>}
 */
 module.exports.verifyPresentation = function(vp, proof_options) {
-    const ptr0 = passStringToWasm0(vp, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(vp, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     const ret = wasm.verifyPresentation(ptr0, len0, ptr1, len1);
     return takeObject(ret);
@@ -618,11 +618,11 @@ module.exports.verifyPresentation = function(vp, proof_options) {
 * @returns {Promise<any>}
 */
 module.exports.DIDAuth = function(holder, linked_data_proof_options, key) {
-    const ptr0 = passStringToWasm0(holder, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(holder, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.DIDAuth(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -633,7 +633,7 @@ module.exports.DIDAuth = function(holder, linked_data_proof_options, key) {
 * @returns {Promise<any>}
 */
 module.exports.JWKFromTezos = function(tz) {
-    const ptr0 = passStringToWasm0(tz, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(tz, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
     const ret = wasm.JWKFromTezos(ptr0, len0);
     return takeObject(ret);
@@ -647,13 +647,13 @@ module.exports.JWKFromTezos = function(tz) {
 * @returns {Promise<any>}
 */
 module.exports.delegateCapability = function(capability, linked_data_proof_options, parents, key) {
-    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(parents, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(parents, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
-    const ptr3 = passStringToWasm0(key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr3 = passStringToWasm0(key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len3 = WASM_VECTOR_LEN;
     const ret = wasm.delegateCapability(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
@@ -667,13 +667,13 @@ module.exports.delegateCapability = function(capability, linked_data_proof_optio
 * @returns {Promise<any>}
 */
 module.exports.prepareDelegateCapability = function(capability, linked_data_proof_options, parents, public_key) {
-    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(parents, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(parents, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
-    const ptr3 = passStringToWasm0(public_key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr3 = passStringToWasm0(public_key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len3 = WASM_VECTOR_LEN;
     const ret = wasm.prepareDelegateCapability(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
@@ -686,11 +686,11 @@ module.exports.prepareDelegateCapability = function(capability, linked_data_proo
 * @returns {Promise<any>}
 */
 module.exports.completeDelegateCapability = function(capability, preparation, signature) {
-    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(capability, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.completeDelegateCapability(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -701,7 +701,7 @@ module.exports.completeDelegateCapability = function(capability, preparation, si
 * @returns {Promise<any>}
 */
 module.exports.verifyDelegation = function(delegation) {
-    const ptr0 = passStringToWasm0(delegation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(delegation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
     const ret = wasm.verifyDelegation(ptr0, len0);
     return takeObject(ret);
@@ -715,13 +715,13 @@ module.exports.verifyDelegation = function(delegation) {
 * @returns {Promise<any>}
 */
 module.exports.invokeCapability = function(invocation, target_id, linked_data_proof_options, key) {
-    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(target_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(target_id, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
-    const ptr3 = passStringToWasm0(key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr3 = passStringToWasm0(key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len3 = WASM_VECTOR_LEN;
     const ret = wasm.invokeCapability(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
@@ -735,13 +735,13 @@ module.exports.invokeCapability = function(invocation, target_id, linked_data_pr
 * @returns {Promise<any>}
 */
 module.exports.prepareInvokeCapability = function(invocation, target_id, linked_data_proof_options, public_key) {
-    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(target_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(target_id, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(linked_data_proof_options, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
-    const ptr3 = passStringToWasm0(public_key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr3 = passStringToWasm0(public_key, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len3 = WASM_VECTOR_LEN;
     const ret = wasm.prepareInvokeCapability(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
@@ -754,11 +754,11 @@ module.exports.prepareInvokeCapability = function(invocation, target_id, linked_
 * @returns {Promise<any>}
 */
 module.exports.completeInvokeCapability = function(invocation, preparation, signature) {
-    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(preparation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(signature, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len2 = WASM_VECTOR_LEN;
     const ret = wasm.completeInvokeCapability(ptr0, len0, ptr1, len1, ptr2, len2);
     return takeObject(ret);
@@ -769,7 +769,7 @@ module.exports.completeInvokeCapability = function(invocation, preparation, sign
 * @returns {Promise<any>}
 */
 module.exports.verifyInvocationSignature = function(invocation) {
-    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
     const ret = wasm.verifyInvocationSignature(ptr0, len0);
     return takeObject(ret);
@@ -781,9 +781,9 @@ module.exports.verifyInvocationSignature = function(invocation) {
 * @returns {Promise<any>}
 */
 module.exports.verifyInvocation = function(invocation, delegation) {
-    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr0 = passStringToWasm0(invocation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len0 = WASM_VECTOR_LEN;
-    const ptr1 = passStringToWasm0(delegation, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(delegation, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     const ret = wasm.verifyInvocation(ptr0, len0, ptr1, len1);
     return takeObject(ret);
@@ -793,7 +793,7 @@ function handleError(f, args) {
     try {
         return f.apply(this, args);
     } catch (e) {
-        wasm.__wbindgen_exn_store(addHeapObject(e));
+        wasm.__wbindgen_export_5(addHeapObject(e));
     }
 }
 
@@ -802,7 +802,7 @@ function getArrayU8FromWasm0(ptr, len) {
     return getUint8Memory0().subarray(ptr / 1, ptr / 1 + len);
 }
 function __wbg_adapter_140(arg0, arg1, arg2, arg3) {
-    wasm.wasm_bindgen__convert__closures__invoke2_mut__h08c1cc29e1cae258(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
+    wasm.__wbindgen_export_6(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
 }
 
 module.exports.__wbindgen_string_new = function(arg0, arg1) {
@@ -871,7 +871,7 @@ module.exports.__wbg_instanceof_Response_849eb93e75734b6e = function(arg0) {
 
 module.exports.__wbg_url_5f6dc4009ac5f99d = function(arg0, arg1) {
     const ret = getObject(arg1).url;
-    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     getInt32Memory0()[arg0 / 4 + 1] = len1;
     getInt32Memory0()[arg0 / 4 + 0] = ptr1;
@@ -904,7 +904,7 @@ module.exports.__wbg_append_7bfcb4937d1d5e29 = function() { return handleError(f
 module.exports.__wbindgen_string_get = function(arg0, arg1) {
     const obj = getObject(arg1);
     const ret = typeof(obj) === 'string' ? obj : undefined;
-    var ptr1 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var ptr1 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     var len1 = WASM_VECTOR_LEN;
     getInt32Memory0()[arg0 / 4 + 1] = len1;
     getInt32Memory0()[arg0 / 4 + 0] = ptr1;
@@ -1181,7 +1181,7 @@ module.exports.__wbg_stringify_8887fe74e1c50d81 = function() { return handleErro
 
 module.exports.__wbindgen_debug_string = function(arg0, arg1) {
     const ret = debugString(getObject(arg1));
-    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
     const len1 = WASM_VECTOR_LEN;
     getInt32Memory0()[arg0 / 4 + 1] = len1;
     getInt32Memory0()[arg0 / 4 + 0] = ptr1;
@@ -1196,8 +1196,8 @@ module.exports.__wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper10027 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 2987, __wbg_adapter_26);
+module.exports.__wbindgen_closure_wrapper10024 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 2986, __wbg_adapter_26);
     return addHeapObject(ret);
 };
 
