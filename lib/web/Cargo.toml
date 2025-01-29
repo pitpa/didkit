@@ -38,3 +38,6 @@ presentation = []
 delegate = []
 invoke = []
 zcap = []
+
+[profile.release]
+strip = true
