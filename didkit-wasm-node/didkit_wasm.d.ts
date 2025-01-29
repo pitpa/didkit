@@ -39,7 +39,7 @@ export function didToVerificationMethod(did: string): Promise<any>;
 export function keyToVerificationMethod(method_pattern: string, jwk: string): Promise<any>;
 /**
 * @param {string} jwk
-* @param {string | undefined} verification_method
+* @param {string | undefined} [verification_method]
 * @returns {string}
 */
 export function getKeyId(jwk: string, verification_method?: string): string;
